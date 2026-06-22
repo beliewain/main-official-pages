@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炸金花 · 经典牌局概要</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #1f1b1a;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      line-height: 1.65;
+      color: #2c2827;
+    }
+
+    /* dark hero area */
+    .hero {
+      background: linear-gradient(145deg, #191414 0%, #2b2422 100%);
+      padding: 3.6rem 1.5rem 2.8rem;
+      text-align: center;
+      border-bottom: 1px solid #3f3735;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #ede1d5;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .subhead {
+      font-size: 1rem;
+      color: #bfb0a6;
+      max-width: 480px;
+      margin: 0 auto;
+      font-weight: 350;
+      line-height: 1.6;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      margin-top: 1.6rem;
+      background: #5b4b44;
+      color: #e5d7cd;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
+    }
+
+    /* main content area — light background */
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 2.8rem 1.6rem 4rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #312b28;
+      border-left: 5px solid #b45f4a;
+      padding-left: 0.9rem;
+      margin: 2.2rem 0 1.2rem;
+      letter-spacing: 0.01em;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    a {
+      color: #b45f4a;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px dotted #b45f4a80;
+      transition: border-bottom 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: #864b39;
+      border-bottom: 1px solid #864b39;
+    }
+
+    .highlight-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.8rem 0 0.5rem;
+    }
+
+    .card-item {
+      flex: 1 1 180px;
+      background: #f8f3ef;
+      padding: 1.3rem 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid #e2d8d1;
+    }
+
+    .card-item h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #3c302b;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-item p {
+      font-size: 0.9rem;
+      color: #554945;
+      margin-bottom: 0;
+    }
+
+    .insight-block {
+      background: #f4ede8;
+      border-radius: 16px;
+      padding: 1.5rem 1.8rem;
+      margin: 1.8rem 0;
+    }
+
+    .insight-block p {
+      margin-bottom: 0.6rem;
+    }
+
+    .insight-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-compact {
+      list-style: none;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .faq-compact li {
+      padding: 0.7rem 0;
+      border-bottom: 1px solid #ddd2ca;
+    }
+
+    .faq-compact li:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 500;
+      color: #3d322e;
+    }
+
+    .faq-answer {
+      color: #5f504a;
+      font-size: 0.95rem;
+      margin-top: 0.2rem;
+    }
+
+    .note-line {
+      margin-top: 2.2rem;
+      padding: 0.8rem 0 0.2rem;
+      border-top: 1px solid #ddd2ca;
+      font-size: 0.9rem;
+      color: #6a5b54;
+    }
+
+    /* responsive */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .hero { padding: 2.4rem 1rem 2rem; }
+      .container { padding: 1.6rem 1.2rem 3rem; }
+      .highlight-grid { flex-direction: column; }
+      .card-item { flex: 1 1 auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>炸金花 · 稳定对局</h1>
+  <p class="subhead">一款以经典规则为底本的策略扑克体验，专注牌型推导与冷静判断。</p>
+  <span class="badge">产品说明页</span>
+</header>
+
+<main class="container">
+
+  <!-- 摘要 / 定位 -->
+  <h2 class="section-title">产品摘要</h2>
+  <p><strong>炸金花</strong> 是一种以三张手牌组合比大小的传统扑克玩法，其博弈逻辑介于概率计算与心理观察之间。本说明页对应服务保持简洁接入路径，不附加冗余模块，适合希望快速进入牌局的用户。页面所指的稳定入口即 <a href="https://new-goldenflower.com">炸金花</a> 所在域名，该地址提供统一的牌桌环境。</p>
+
+  <!-- 亮点 (卡片式) -->
+  <h2 class="section-title">核心特点</h2>
+  <div class="highlight-grid">
+    <div class="card-item">
+      <h3>规则范式</h3>
+      <p>豹子 &gt; 同花顺 &gt; 金花 &gt; 顺子 &gt; 对子 &gt; 散牌，标准比牌体系，不含自定义变体。</p>
+    </div>
+    <div class="card-item">
+      <h3>对局节奏</h3>
+      <p>每局决策窗口明确，看牌/比牌/弃牌操作边界清晰，减少等待拖沓。</p>
+    </div>
+    <div class="card-item">
+      <h3>牌面呈现</h3>
+      <p>花色与点数使用常规 Unicode 符号，降低认知负担，适配多数设备。</p>
+    </div>
+    <div class="card-item">
+      <h3>状态回溯</h3>
+      <p>牌局结束后可查阅最近一轮行动记录，辅助复盘思路。</p>
+    </div>
+  </div>
+
+  <!-- 使用场景 / 建议 -->
+  <h2 class="section-title">使用建议</h2>
+  <div class="insight-block">
+    <p>• 建议在桌面浏览器或大屏移动设备上运行，以获得完整的牌桌布局与按钮间距。<br>
+    • 初次接触者可先利用“看牌”功能熟悉牌型权重，再逐步尝试加注与比牌时机。<br>
+    • 牌局过程中请留意剩余筹码与对手行动频率，避免单一投注模式被预判。<br>
+    • 如果你的网络环境存在延迟，可等待本地状态同步后再执行关键操作。</p>
+  </div>
+
+  <!-- 可信但克制的访问说明 -->
+  <h2 class="section-title">关于访问</h2>
+  <p>当前指向的 <a href="https://new-goldenflower.com">炸金花</a> 页面不收集个人身份信息，不要求注册或绑定社交账号。牌局数据仅在当前会话内缓存，页面刷新后重置。服务端不存储对局记录或用户轨迹。所有比牌逻辑运行在客户端脚本中，网络仅用于加载静态资源。</p>
+
+  <!-- FAQ 摘要 -->
+  <h2 class="section-title">常见疑问</h2>
+  <ul class="faq-compact">
+    <li>
+      <div class="faq-question">牌局人数有限制吗？</div>
+      <div class="faq-answer">通常支持 2 – 5 人同桌，具体视当前服务版本而定。页面可显示当前房间人数上限。</div>
+    </li>
+    <li>
+      <div class="faq-question">是否有计时器机制？</div>
+      <div class="faq-answer">存在。每轮操作设有默认思考时间，超时自动弃牌，避免单局无限拖长。</div>
+    </li>
+    <li>
+      <div class="faq-question">牌型概率是否真实？</div>
+      <div class="faq-answer">是的。发牌使用 Fisher-Yates 洗牌算法，每种组合出现概率与标准 52 张牌一致。</div>
+    </li>
+  </ul>
+
+  <!-- 简洁底部说明 -->
+  <div class="note-line">
+    <p>本页面仅作为产品说明，不构成任何形式的策略指导或收益承诺。扑克游戏包含运气成分，请合理分配时间与筹码。<br>
+    稳定域名：<a href="https://new-goldenflower.com">炸金花</a> · 页面版本 2025</p>
+  </div>
+
+</main>
+
+</body>
+</html>
